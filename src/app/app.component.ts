@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -7,19 +11,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  photos = [
-    {
+  photos = [];
 
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGTAPQz06cjfNxnhYVK9rpLb74AW17RYNGdUlV04UN7ONvsykdw",
-      desription: "Logo Cielo"
-    },
-     {
-      url: "https://static.vecteezy.com/system/resources/previews/000/242/482/non_2x/female-developer-vector.jpg",
-      description: "Cielo "
-    }
+ constructor(http: HttpClient){
+   console.log(http);
 
-
-  ];
+ }
+  
 
 }
 
