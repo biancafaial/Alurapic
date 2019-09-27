@@ -11,12 +11,9 @@ import { PhotoModule } from "./photo/photo.module";
     imports: [
         PhotoModule,
         PhotoFormModule,
-        PhotoListModule,
-              
+        PhotoListModule,         
     ]
-
 })
 export class PhotosModule {
-
 
 }
