@@ -18,8 +18,8 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     PhotosModule,
     AppRoutingModule,
-     ErrorsModule,
-     HomeModule
+    ErrorsModule,
+    HomeModule
   
   ],
   providers: [],
