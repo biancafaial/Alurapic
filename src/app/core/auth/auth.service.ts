@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { tap } from 'rxjs/operators'
+
+import { UserService } from '../user/user.service';
 import { API } from 'src/app/app.api';
+
+
 
 
 @Injectable({
@@ -8,14 +13,19 @@ import { API } from 'src/app/app.api';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private userService: UserService ) { }
 
   authenticate(userName: string, password: string){
     //post será nessa URL
-     return this.http.post(`${API}/user/login`,{userName, password});
-
-    
-   
+     return this.http
+     .post(`${API}/user/login`,{userName, password}, {observe: 'response'})
+     .pipe(tap(res =>{
+      const authToken = res.headers.get('x-access-token');
+      this.userService.setToken(authToken);
+      console.log(`User ${userName} authenticated with token ${authToken}`);
+    }));
 
   }
 
