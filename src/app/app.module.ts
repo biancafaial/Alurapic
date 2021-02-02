@@ -6,6 +6,8 @@ import { PhotosModule } from './photos/photos.module';
 import { AppRoutingModule } from './app.Routing.Module';
 import { ErrorsModule } from './errors/errors.module';
 import { HomeModule } from './home/home.module';
+import { HeaderComponent } from './core/header/header.component';
+import { CoreModule } from './core/core.module';
 
 
 
@@ -19,7 +21,9 @@ import { HomeModule } from './home/home.module';
     PhotosModule,
     AppRoutingModule,
     ErrorsModule,
-    HomeModule
+    HomeModule,
+    CoreModule
+
   
   ],
   providers: [],
