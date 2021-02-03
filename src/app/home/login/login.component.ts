@@ -6,7 +6,6 @@ import { PlatformDetectorService } from 'src/app/core/platform-detector/platform
 
 @Component({
   templateUrl: './login.component.html'
-  //styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 

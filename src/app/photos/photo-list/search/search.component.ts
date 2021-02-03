@@ -19,6 +19,6 @@ export class SearchComponent implements OnInit, OnDestroy {
         
     }
     ngOnDestroy(): void {
-        this.debounce.unsubscribe();
+        this.debounce.unsubscribe;
     }
 }
