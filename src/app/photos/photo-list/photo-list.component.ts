@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { debounceTime } from 'rxjs/operators';
 
 
-import { Photo } from '../photo/photo';
+import { Photo } from '../photo/photo.model';
 import { PhotoService } from '../photo/photo.service';
 
 @Component({

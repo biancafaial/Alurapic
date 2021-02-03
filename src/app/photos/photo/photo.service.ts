@@ -1,7 +1,7 @@
 import {  HttpClient, HttpParams } from "@angular/common/http"; 
 import { Injectable } from "@angular/core";
 import { API } from "src/app/app.api";
-import { Photo } from "./photo";
+import { Photo } from "./photo.model";
 
 
 @Injectable({ providedIn: 'root'})

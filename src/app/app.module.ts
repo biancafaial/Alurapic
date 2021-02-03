@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PhotosModule } from './photos/photos.module';
-import { AppRoutingModule } from './app.Routing.Module';
+import { AppRoutingModule } from './app.routes';
 import { ErrorsModule } from './errors/errors.module';
 import { HomeModule } from './home/home.module';
 import { HeaderComponent } from './core/header/header.component';
