@@ -39,7 +39,7 @@
       <ap-vmessage *ngIf="singupForm.get('userName').errors?.maxlength" 
       text="número de caracteres Inválido!">
       </ap-vmessage>
-       <ap-vmessage *ngIf="singupForm.get('userName').errors?.pattern" 
+       <ap-vmessage *ngIf="singupForm.get('userName').errors?.lowerCase" 
       text="deve ser minúsculo!">
       </ap-vmessage>
     </div>
