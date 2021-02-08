@@ -10,6 +10,7 @@ import { PlatformDetectorService } from 'src/app/core/platform-detector/platform
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+
   @ViewChild('userNameInput') userNameInput: ElementRef<HTMLInputElement>;
     
   constructor(
@@ -22,8 +23,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
       this.loginForm = this.formBuilder.group({
-          userName: ["" , Validators.required],
-          password: ["", Validators.required]
+          userName: ['' , Validators.required],
+          password: ['', Validators.required]
 
       });
   }

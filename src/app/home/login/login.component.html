@@ -9,9 +9,9 @@
       <input #userNameInput formControlName="userName" 
       class="form-control" placeholder="Usuário" autofocus>
 
-      <app-vmessage *ngIf="loginForm.get('userName').errors?.required" 
+      <ap-vmessage *ngIf="loginForm.get('userName').errors?.required" 
         text="Usuário obrigatório!">
-      </app-vmessage>
+      </ap-vmessage>
       
     </div>
 
@@ -19,8 +19,8 @@
       <label for="" class="box-label">Senha</label>
       <input formControlName="password" type="password" class="form-control" placeholder="Password">
 
-      <app-vmessage *ngIf="loginForm.get('password').errors?.required" text="Senha obrigatória!">
-      </app-vmessage>
+      <ap-vmessage *ngIf="loginForm.get('password').errors?.required" text="Senha obrigatória!">
+      </ap-vmessage>
 
     </div>
     <div class="text-center">
