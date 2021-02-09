@@ -5,12 +5,12 @@ import { CommonModule } from "@angular/common";
 
 import { LoginComponent } from "./login/login.component";
 import { VmessageModule } from "../shared/components/vmessage/vmessage.module";
-import { SingUpComponent } from "./singup/singup.component";
+import { SignUpComponent } from "./signup/signup.component";
 
 @NgModule({
     declarations: [
        LoginComponent,
-       SingUpComponent
+       SignUpComponent
        
       
     ],  

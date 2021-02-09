@@ -7,7 +7,7 @@ import { NotFoundComponent } from "./errors/not-found/not-found.component";
 import { PhotoListResolver } from "./photos/photo-list/photo-list.resolver";
 import { LoginComponent } from "./home/login/login.component";
 import { AuthGuard } from "./core/auth/auth.guard";
-import { SingUpComponent } from "./home/singup/singup.component";
+import { SignUpComponent } from "./home/signup/signup.component";
 
 const routes: Routes = [
 
@@ -18,8 +18,8 @@ const routes: Routes = [
      },
 
      {  
-         path: 'singup', 
-         component: SingUpComponent,
+         path: 'signup', 
+         component: SignUpComponent,
      },
 
     {
