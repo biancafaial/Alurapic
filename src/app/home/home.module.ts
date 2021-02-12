@@ -7,6 +7,7 @@ import { LoginComponent } from "./login/login.component";
 import { VmessageModule } from "../shared/components/vmessage/vmessage.module";
 import { SignUpComponent } from "./signup/signup.component";
 import { HomeComponent } from './home.component';
+import { HomeRoutingModule } from "./home.routes";
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home.component';
         ReactiveFormsModule,
         VmessageModule,
         RouterModule,
-        FormsModule
+        FormsModule,
+        HomeRoutingModule
     ]
 })
 export class HomeModule {}
