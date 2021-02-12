@@ -8,18 +8,18 @@ import { PhotoListResolver } from "./photos/photo-list/photo-list.resolver";
 import { LoginComponent } from "./home/login/login.component";
 import { AuthGuard } from "./core/auth/auth.guard";
 import { SignUpComponent } from "./home/signup/signup.component";
+import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
 
     {  
         path: '', 
-        component: LoginComponent,
-        canActivate: [AuthGuard]
-     },
-
-     {  
-         path: 'signup', 
-         component: SignUpComponent,
+        component: HomeComponent,
+        canActivate: [AuthGuard],
+        children: [
+            { path: '', component: LoginComponent },
+            { path: 'signup', component: SignUpComponent },
+        ]
      },
 
     {

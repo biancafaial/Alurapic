@@ -6,7 +6,6 @@ import { PhotosModule } from './photos/photos.module';
 import { AppRoutingModule } from './app.routes';
 import { ErrorsModule } from './errors/errors.module';
 import { HomeModule } from './home/home.module';
-import { HeaderComponent } from './core/header/header.component';
 import { CoreModule } from './core/core.module';
 
 

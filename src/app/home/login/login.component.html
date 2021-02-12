@@ -23,7 +23,7 @@
       </ap-vmessage>
 
     </div>
-    <div class="text-center">
+    <div class="text-center" style="margin-bottom: 10px;">
 
       <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-space"
         style="margin-right: 20px;"> Entrar</button>
@@ -31,5 +31,7 @@
 
     </div>
   </form>
+
+  <p>Não tem conta? <a [routerLink]="['signup']">Cadastre-se!</a></p>
 
 </div>
