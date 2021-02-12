@@ -3,9 +3,7 @@ import { Injectable } from '@angular/core';
 import { API } from 'src/app/app.api';
 import { NewUser } from './new-user.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SignupService {
 
   constructor(private http : HttpClient) { }
