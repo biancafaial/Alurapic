@@ -1,14 +1,20 @@
 <div class="container">
-  <form [formGroup]="photoForm" class="row">
+  <form [formGroup]="photoForm" class="row" (submit)="upload()">
     <div class="col-md-6 text-center">
-      <input formControlName="file" type="file" accept="image/*">
-      <ap-vmessage text="Por Favor, Selecione uma foto" *ngIf="photoForm.get('file').errors?.required">
+      <input 
+        formControlName="file" 
+        type="file" accept="image/*"
+        (change)="file = $event.target.files[0]">
+      <ap-vmessage 
+        text="Por Favor, Selecione uma foto" 
+        *ngIf="photoForm.get('file').errors?.required">
       </ap-vmessage>
     </div>
 
     <div class="col-md-6">
       <div class="form-group">
-        <textarea formControlName="description" class="form-control form-control-sm"
+        <textarea   
+          formControlName="description" class="form-control form-control-sm"
           placeholder="photo description"></textarea>
         <ap-vmessage 
           text="Máximo 300 caracteres" 
