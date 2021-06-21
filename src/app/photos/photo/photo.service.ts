@@ -36,4 +36,8 @@ export class PhotoService{
 
     }
 
+    findById(id: string){
+        return this.http.get<Photo>(API + '/photos/' + id);
+    }
+
 }
