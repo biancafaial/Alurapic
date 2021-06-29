@@ -16,7 +16,8 @@ const routes: Routes = [
     },
 
     {
-        path: 'home', loadChildren:'./home/home.module#HomeModule'
+        path: 'home', 
+        loadChildren:'./home/home.module#HomeModule'
     },
 
     {
@@ -24,21 +25,33 @@ const routes: Routes = [
         component: PhotoListComponent,
         resolve:{
             photos: PhotoListResolver
-        } 
+        },
+        data: {
+            title: 'Timeline'
+        }
     },
 
     { 
         path: 'p/add', 
         component: PhotoFormComponent,
-        canActivate:[AuthGuard]
+        canActivate:[AuthGuard],
+        data: {
+            title:'Foto Upload'
+        }
     },
     { 
         path: 'p/:photoId', 
         component: PhotoDetailsComponent,
+        data: {
+            title:'Foto'
+        }
     },
     { 
         path: 'not-found', 
-        component: NotFoundComponent
+        component: NotFoundComponent,
+        data: {
+            title:'Not found'
+        }
      },
 
     { 
