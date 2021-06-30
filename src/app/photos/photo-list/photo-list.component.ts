@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { debounceTime } from 'rxjs/operators';
+import { LoadingService } from 'src/app/shared/components/loading/loading.service';
 
 
 import { Photo } from '../photo/photo.model';
@@ -26,7 +27,6 @@ export class PhotoListComponent implements OnInit {
     private photoService: PhotoService) { }
 
   ngOnInit(): void {
-
     this.activatedRoute.params.subscribe(params =>{
       this.userName = params.userName;
       this.photos = this.activatedRoute.snapshot.data['photos'];
